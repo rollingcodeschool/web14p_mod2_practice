@@ -6,20 +6,20 @@
 // Complejos
 // objeto => {}, tiene pares key:value, tiene propiedades
 // y metodos
-// const franco = {
-//   name: "Franco",
-//   lastname: "Diaz",
-//   age: 31,
-//   isAlive: true,
-//   address: {
-//     street: "General paz",
-//     streetNumber: 576,
-//   },
-// };
-// const edad = 30;
-// console.log(edad);
-// console.log(franco["age"])
-// console.log(franco.age)
+const franco = {
+  name: "Franco",
+  lastname: "Diaz",
+  age: 31,
+  isAlive: true,
+  address: {
+    street: "General paz",
+    streetNumber: 576,
+  },
+};
+const edad = 30;
+console.log(edad);
+console.log(franco["age"])
+console.log(franco.age)
 // Nombre, apellido, nacionalidad, edad, si tiene padres
 // type Nationality = "AR" | "CL" | "BR";
 enum Nationality {
