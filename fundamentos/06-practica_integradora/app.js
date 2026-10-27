@@ -69,3 +69,25 @@ const estilo =
 console.log("%cBienvenido al mini Inventario!", estilo);
 
 venderProducto();
+
+/*
+Un comerciante hace descuentos a sus clientes de la siguiente forma:
+
+- Si ha comprado menos de 100 dolares no hay descuento
+- Si la compra está entre 100 y 300 dolares le descuenta un 5%
+- Si la compra está por encima de 300 hasta 500 dolares le descuenta un 10%
+- Si la compra supera los 500 dolares le descuenta un 15%
+*/
+let compra = Number(prompt("Ingrese el valor de la compra"));
+let descuento = 0;
+let totalPagar = 0;
+if (compra > 500) {
+  descuento = compra * 0.15;
+} else if (compra > 300) {
+  descuento = compra * 0.1;
+} else if (compra >= 100) {
+  descuento = compra * 0.05;
+}
+
+totalPagar = compra - descuento;
+console.log(`El pago de tu compra es de: $${totalPagar}`);

@@ -16,3 +16,4 @@
 const nombre: string = '20';
 const edad: number = 31;
 const esDeSMT: boolean = true;
+
