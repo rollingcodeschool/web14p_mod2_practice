@@ -68,3 +68,9 @@ function calcularDescuento() {
     }
   }
 }
+
+//Bucles
+
+//Funciones
+
+//Arrays
