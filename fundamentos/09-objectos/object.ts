@@ -133,7 +133,7 @@ const cursos: Curso[] = [
   },
   {
     id: 3,
-    titulo: "React y TypeScript",
+    titulo: "Desarrollo con React y TypeScript",
     profesor: "Lucía Fernández",
     horasTotales: 80,
     precio: 180000,
@@ -179,4 +179,63 @@ const cursos: Curso[] = [
 
 console.log(cursos[0].titulo);
 
-cursos.forEach((curso) => console.log(curso));
+//Buscar un curso
+function buscarCurso(id: number): void {
+  const cursoEncontrado = cursos.find((curso) => curso.id === id);
+  if (cursoEncontrado) {
+    const { titulo, precio, horasTotales } = cursoEncontrado;
+
+    // console.log(cursoEncontrado.precio)
+
+    console.log(
+      `Título: ${titulo} | Horas: ${horasTotales} | Precio: ${precio}`,
+    );
+  }
+}
+
+function buscarCursoPorTitulo(termino: string): void {
+  const cursosEncontrados = cursos.filter(
+    (curso) =>
+      curso.titulo.toLowerCase().includes(termino.toLowerCase()) &&
+      curso.disponible === true,
+  );
+  if (cursosEncontrados.length === 0) {
+    console.error("No se encontraron resultados");
+  } else {
+    console.log(cursosEncontrados);
+  }
+}
+
+buscarCursoPorTitulo("cosita");
+
+//Crear un curso
+
+function crearCurso(datos: Curso): void {
+  const id = cursos.length + 1;
+
+  const newCurso = { id, ...datos };
+
+  cursos.push(newCurso);
+
+  console.log(cursos);
+}
+
+const nuevoCurso: Curso = {
+  titulo: "Desarrollo de Aplicaciones con Inteligencia Artificial",
+  profesor: "Martín Ramírez",
+  horasTotales: 50,
+  precio: 135000,
+  disponible: true,
+  nivel: "Intermedio",
+  descripcion:
+    "Aprendé a integrar herramientas y modelos de inteligencia artificial para crear aplicaciones inteligentes.",
+};
+
+crearCurso(nuevoCurso);
+//Filtrar por datos de los cursos
+
+function cursosActivos(): void {
+  const cursosDisponibles = cursos.filter((curso) => curso.disponible === true);
+  console.log(cursosDisponibles);
+}
+cursosActivos();
