@@ -23,7 +23,10 @@ function informeNavegador() {
 
   if (respuesta) {
     console.clear();
-    console.log("--- InFORME DEL NAVEGADOR ---");
+    console.log(
+      "%c--- InFORME DEL NAVEGADOR ---",
+      "color:white;background:blue",
+    );
 
     console.log("URL completa: " + location.href);
     console.log("Dominio del servidor: " + location.hostname);
