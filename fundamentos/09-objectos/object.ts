@@ -212,11 +212,8 @@ buscarCursoPorTitulo("cosita");
 
 function crearCurso(datos: Curso): void {
   const id = cursos.length + 1;
-
   const newCurso = { id, ...datos };
-
   cursos.push(newCurso);
-
   console.log(cursos);
 }
 

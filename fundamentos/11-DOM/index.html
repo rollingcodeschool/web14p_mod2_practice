@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Práctica DOM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      picture {
+        img {
+          height: 330px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">DOM✨</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- lista de enlaces  -->
+
+              <button id="btn-mode" class="ms-2 btn">🌙</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="row p-5">
+        <div class="col">
+          <h1>Bienvenido a la práctica del DOM⚙️</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            El Modelo de Objetos del Documento (DOM) conecta las páginas web con
+            scripts o lenguajes de programación al representar en memoria la
+            estructura de un documento (como el HTML que define una página web).
+          </p>
+        </div>
+        <div class="col">
+          <section>
+            <h3>Conceptos y uso</h3>
+            <p>
+              El Modelo de Objetos del Documento (DOM) es una interfaz de
+              programación para documentos web. Representa la página de modo que
+              los programas puedan cambiar la estructura, el estilo y el
+              contenido del documento. El DOM representa el documento como nodos
+              y objetos; de esta forma, los lenguajes de programación pueden
+              interactuar con la página.
+            </p>
+            <p>
+              Una página web es un documento que puede visualizarse en la
+              ventana del navegador o como código fuente HTML. En ambos casos se
+              trata del mismo documento, pero la representación mediante el
+              Modelo de Objetos del Documento (DOM) permite manipularlo. Al ser
+              una representación de la página web orientada a objetos, se puede
+              modificar con un lenguaje de scripting, como JavaScript.
+            </p>
+          </section>
+        </div>
+        <div class="col">
+          <picture>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0lp9nV_8dNgHimFh_ttgQ3POb7x9iIDESdo0R_gTHjvHm18MoaelTPRw-&s=10"
+              alt="imagen"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="row pt-3">
+        <div class="col-12">
+          <h3>Tabla de métodos y propiedades</h3>
+        </div>
+        <div class="col border rounded-3 overflow-auto my-3">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Categoría</th>
+                <th>Método</th>
+                <th>Sintáxis</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo_tabla"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
