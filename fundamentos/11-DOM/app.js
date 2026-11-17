@@ -107,7 +107,9 @@ menuDOM.map((enlace) => {
   item.className = "nav-item me-2";
   //   item.textContent = enlace.text;
   const ancla = `<a class="nav-link" target="_blank" href=${enlace.path}>${enlace.text}</a>`;
+
   item.innerHTML = ancla;
+  // item.setHTML(ancla);
   //viejo
   //   menuContainer.appendChild(item);
   //nuevo
@@ -120,3 +122,50 @@ menuDOM.map((enlace) => {
 document.querySelector("img").src =
   "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/example-dom-tree.svg";
 document.querySelector("img").alt = "Imagen de nodos";
+
+//cargar tabla
+const cuerpoTabla = document.getElementById("cuerpo_tabla");
+
+metodosDOM.map((dato, index) => {
+  const fila = document.createElement("tr");
+  const celdas = `<td>${index + 1}</td>
+<td>${dato.categoria}</td>
+<td>${dato.metodo}</td>
+<td><code>${dato.sintaxis}</code></td>
+<td>${dato.descripcion}</td>`;
+  fila.setHTML(celdas);
+
+  cuerpoTabla.append(fila);
+});
+
+let modeTheme = false;
+const nav = document.querySelector("nav");
+
+btnMode.addEventListener("click", () => {
+  modeTheme = !modeTheme;
+
+  const theme = modeTheme ? "dark" : "light";
+
+  nav.classList.toggle("bg-dark", modeTheme);
+  nav.setAttribute("data-bs-theme", theme);
+  document.body.setAttribute("data-bs-theme", theme);
+
+  btnMode.textContent = modeTheme ? "☀️" : "🌙";
+  btnMode.classList.toggle("btn-dark", modeTheme);
+});
+
+const input = document.getElementById("inputValue");
+
+const mostrarInputValue = () => {
+  console.log(input.value);
+  input.value = "";
+  input.focus();
+};
+
+const formu = document.getElementById("formulario");
+
+formu.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // console.log(event.target[0].value);
+  console.log(input.value);
+});
